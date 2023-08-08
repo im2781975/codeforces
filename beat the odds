@@ -1,0 +1,28 @@
+/* https://codeforces.com/contest/1691/problem/A
+*/
+#include<stdio.h>
+int main()
+{
+    int t;
+    scanf("%d", &t);
+    while(t--)
+    {
+        long long int n, arr[100005], i, even=0, odd=0;
+        scanf("%lld", &n);
+        for(i=0; i<n; i++){
+            scanf("%lld", &arr[i]);
+        }
+        for(i=0; i<n; i++){
+            if(arr[i]%2 == 0){
+                 even++;
+            }
+            else if(arr[i]%2 != 0)
+                odd++;
+        }
+        if(even<odd)
+            printf("%lld\n", even);
+        else
+            printf("%lld\n", odd);
+    }
+    return 0;
+}
