@@ -1,0 +1,44 @@
+/* https://codeforces.com/problemset/problem/1734/A */
+#include<stdio.h>
+int sort(int n, int a[])
+{
+    int i, j, temp;
+    for (i = 0; i < n; ++i){
+        for (j = i + 1; j < n; ++j){
+            if (a[i] > a[j]){
+                    temp =  a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+            }
+        }
+    }
+    return a;
+}
+
+int min(int a, int b)
+{
+    if(a<b)
+        return a;
+    else
+        return b;
+}
+int main(){
+    int t;
+    scanf("%d", &t);
+    while(t--){
+        int n, i;
+        scanf("%d", &n);
+        int a[n+5];
+        for(i=0; i<n; i++){
+            scanf("%d", &a[i]);
+        }
+        sort(n, a);
+        int ans = 2e9;
+        for(i=1; i<=n-2; i++){
+            ans = min(ans,(int)(a[i]-a[i-1])+(a[i+1]-a[i]));
+        }
+        printf("%d\n", ans);
+
+    }
+    return 0;
+}
