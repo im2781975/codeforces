@@ -1,0 +1,19 @@
+/* https://codeforces.com/problemset/problem/118/A?mobile=false */
+#include<stdio.h>
+int main()
+{
+    int i;
+    int s[105];
+    fgets(s,sizeof(s),stdin);
+    for(i=0;i<strlen(s)-1;i++)
+    {
+        if(s[i]>='A' && s[i]<='Z')
+        {
+           s[i]+=32;
+        }
+        if(!(s[i]=='a'||s[i]=='e'||s[i]=='o'||s[i]=='u'));
+        {
+        printf(".%c",s[i]);
+        }
+    }
+}
