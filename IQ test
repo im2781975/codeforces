@@ -1,0 +1,36 @@
+/* https://codeforces.com/problemset/problem/25/A?mobile=false */
+#include<stdio.h>
+int main()
+{
+    int i,n,even_counter=0,odd_counter=0,ans;
+    int arr[50];
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=1;i<=n;i++)
+    {
+        if(arr[i]%2==0)
+        even_counter++;
+        else
+        odd_counter++;
+    }
+    if(even_counter==1)
+    {
+    for(i=1;i<=n;i++)
+    {
+        if(arr[i]%2==0)
+        ans=i;
+    }
+    }
+    else
+    {
+    for(i=1;i<=n;i++)
+    {
+        if(arr[i]%2!=0)
+        ans=i;
+    }
+    }
+    printf("%d",ans);
+}
