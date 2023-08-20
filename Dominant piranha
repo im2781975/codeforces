@@ -1,0 +1,38 @@
+/* https://codeforces.com/problemset/problem/1433/C?mobile=false */
+#include<stdio.h>
+int main()
+{
+    int t;
+    scanf("%d", &t);
+    while(t--){
+        int n, cont=1, mx=0, i, ans;
+        scanf("%d", &n);
+        int arr[n+9];
+        for(i=1; i<=n; i++){
+            scanf("%d", &arr[i]);
+        }
+        for(i=1; i<n; i++){
+            if(arr[i] == arr[i+1]){
+                cont++;
+            }
+        }
+        if(n==cont){
+            printf("-1\n");
+        }
+        else{
+            for(i=1; i<=n; i++){
+                if(arr[i]>mx){
+                    mx = arr[i];
+                }
+            }
+            for(i = 1 ; i <= n; i++) {
+            if (arr[i] == mx && i > 1 && arr[i] > arr[i-1])
+                ans = i;
+            if (arr[i] == mx && i < n && arr[i] > arr[i+1])
+                ans = i;
+            }
+            printf("%d\n", ans);
+        }
+    }
+
+}
