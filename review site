@@ -1,0 +1,22 @@
+/* https://codeforces.com/problemset/problem/1511/A?mobile=false */
+#include<stdio.h>
+int main()
+{
+    int t;
+    scanf("%d", &t);
+    while(t--){
+        int n, i, up=0, down=0;
+        scanf("%d", &n);
+        int arr[n+9];
+        for(i=1; i<=n; i++){
+            scanf("%d", &arr[i]);
+        }
+        for(i=1; i<=n; i++){
+            if(arr[i] != 2){
+                up++;
+            }
+
+        }
+        printf("%d\n", up);
+    }
+}
