@@ -1,0 +1,28 @@
+/*https://codeforces.com/contest/1472/problem/A */
+#include<stdio.h>
+int main()
+{
+    long long int t;
+    scanf("%lld", &t);
+
+    while(t--){
+        long long int w, h, n, i, cont=1, val, j, temp;
+        scanf("%lld %lld %lld", &w, &h, &n);
+        while((w%2==0)||(h%2==0)){
+            if(w%2==0){
+                w = w/2;
+                cont = cont*2;
+            }
+            else if(h%2==0){
+                h = h/2;
+                cont = cont*2;
+            }
+        }
+        if(cont>=n)
+            printf("YES\n");
+        else
+            printf("NO\n");
+    }
+    return 0;
+}
+
