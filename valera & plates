@@ -1,0 +1,60 @@
+https://codeforces.com/problemset/problem/369/A
+#include<stdio.h>
+int main()
+{
+    int n,b,p, i, ans, ans1, ans2, bowl = 0, plate = 0;
+    scanf("%d%d%d", &n, &b, &p);
+    int arr[n+5];
+    for(i=0; i<n; i++)
+        scanf("%d", &arr[i]);
+    for(i=0; i<n; i++){
+        if(arr[i] == 1){
+            bowl++;
+        }
+        else if(arr[i] == 2){
+            plate++;
+        }
+    }
+    if(b > bowl){
+        ans1 = 0;
+        b = b - bowl;
+    }
+    else if(b < bowl){
+
+        ans1 = bowl - b;
+        b = 0;
+    }
+    else{
+        ans1 = 0;
+        b = 0;
+    }
+
+
+    if(p > plate){
+        ans2 = 0;
+    }
+    else if (p < plate){
+        plate = plate - p;
+
+        if(b>0)
+            if(b > plate){
+                b = b - plate;
+                ans2 = 0;
+            }
+
+            else
+                ans2 = plate - b;
+        else
+            ans2 = plate;
+    }
+    else{
+        ans2 = 0;
+        p =  0;
+    }
+
+
+    ans = ans1+ans2;
+    printf("%d\n", ans);
+
+    return 0;
+}
