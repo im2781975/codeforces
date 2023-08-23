@@ -1,0 +1,25 @@
+/* https://codeforces.com/contest/1475/problem/A */
+#include<stdio.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+    int i=2,n,flag=0;
+    scanf("%d",&n);
+    while(i<=n)
+    {
+        if(n%i==0 && i%2!=0)
+            flag=1;
+            
+          i++;
+    }
+    if(flag==1)
+    {
+        printf("Yes\n");
+    }
+    else
+    printf("No\n");
+    }
+}
