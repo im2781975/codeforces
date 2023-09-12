@@ -1,0 +1,39 @@
+1795/A
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int m,n,p1=0,p2=0;
+        string a,b;
+        cin>>m>>n;
+        cin>>a>>b;
+        for(int i=0;i<n-1;i++)
+        {
+            if(a[i]=a[i+1])
+            p1++;
+        }
+        for(int i=0;i<m-1;i++)
+        {
+            if(b[i]=b[i+1])
+            p2++;
+            
+        }
+        if(p1<=0 && p2<=0)
+        cout<<"Yes";
+        else if(p1>=1 && p2>=1)
+        cout<<"No";
+        else if(p1>=2 && p2>=2)
+        cout<<"No";
+        else
+        {
+            if(a[n-1]==b[n-1]
+            cout<<"No";
+            else
+            cout<<"Yes";
+        }
+    }
+}
