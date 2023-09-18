@@ -1,11 +1,11 @@
-/*https://codeforces.com/contest/1791/problem/G1 */
+/* https://codeforces.com/contest/1791/problem/G1 */
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
- 
+
     int t;
     cin >> t;
     while (t--)
@@ -20,11 +20,6 @@ int main() {
             l.push_back(i + in);
         }
         l.sort();
-        /*while(!l.empty())
-        {
-            cout<<l.front()<<"\n";
-            l.pop_front();
-        }*/
         int ans = 0;
         while (!l.empty() && c >= 1)
         {
@@ -36,6 +31,6 @@ int main() {
         }
         cout << ans << '\n';
     }
- 
+
     return 0;
-}
+}p
