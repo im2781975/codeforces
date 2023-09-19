@@ -1,5 +1,4 @@
-
-https://codeforces.com/problemset/problem/1708/A
+/*https://codeforces.com/problemset/problem/1708/A*/
 #include<stdio.h>
 int main()
 {
