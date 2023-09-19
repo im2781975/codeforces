@@ -1,4 +1,4 @@
-//1730/A
+/*https://codeforces.com/problemset/problem/1730/A?mobile=false */
 #include<bits/++.h>
 using namespace std;
 int main()
