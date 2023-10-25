@@ -1,0 +1,25 @@
+// //codeforces.com/contest/1787/submission/191282638
+/**
+* author: mj_riffu
+* created: 2023-01-30 22:19:28
+**/
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        if (n % 2 == 0)
+            cout << (n / 2) << " " << 1 << '\n';
+        else
+            cout << -1 << '\n';
+    }
+    return 0;
+}
