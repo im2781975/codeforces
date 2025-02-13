@@ -43,6 +43,14 @@ int main(){
     cout << res;
 }
 using namespace std;
+//problem/1742/A_given three integers a Determine if one of them is the sum of the other two.
+int main(){
+    int t; cin >> t;
+    while(t--){
+        (a + b == c || b + c == a || a + c == b) ? cout << "Yes" : cout << "No";
+    }
+}
+using namespace std;
 //problem/1760/A_find the medium number among three integers
 int medium(int a, int b, int c){
     int maxi = a, mini = a;
@@ -72,13 +80,5 @@ int main(){
         for(int i = 0; i < n; i++)
             sum += arr[i];
         (sum % 2 == 0) ? cout << "Yes\n" : cout << "No\n"
-    }
-}
-using namespace std;
-//problem/1742/A_given three integers a Determine if one of them is the sum of the other two.
-int main(){
-    int t; cin >> t;
-    while(t--){
-        (a + b == c || b + c == a || a + c == b) ? cout << "Yes" : cout << "No";
     }
 }
