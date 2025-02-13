@@ -74,3 +74,11 @@ int main(){
         (sum % 2 == 0) ? cout << "Yes\n" : cout << "No\n"
     }
 }
+using namespace std;
+//problem/1742/A_given three integers a Determine if one of them is the sum of the other two.
+int main(){
+    int t; cin >> t;
+    while(t--){
+        (a + b == c || b + c == a || a + c == b) ? cout << "Yes" : cout << "No";
+    }
+}
