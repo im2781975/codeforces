@@ -42,3 +42,20 @@ int main(){
     else res = l1 + l2;
     cout << res;
 }
+using namespace std;
+//problem/1760/A_find the medium number among three integers
+int medium(int a, int b, int c){
+    int maxi = a, mini = a;
+    if(b > maxi) maxi = b;
+    if(c > maxi) maxi = c;
+    if(b < mini) mini = b;
+    if(c < mini) mini = c;
+    return a + b + c - maxi - mini;
+}
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int a, b, c; cin >> a >> b >> c;
+        cout << medium(a, b, c));
+    }
+}
