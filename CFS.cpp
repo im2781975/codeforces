@@ -31,3 +31,14 @@ int main(){
     }
     cout << ans + res;
 }
+using namespace std;
+//contest/1680/problem/A_calculate the minimum possible number of elements in a array by which range [l1, r1] elements 
+// equal to its minimum and [l2, r2] elements in the array equal to its maximum.
+int main(){
+    int l1, l2, r1, r2, res;
+    cin >> l1 >> r1 >> l2 >> r2;
+    if(l2 >= l1 && l2 <= r1) res = l2;
+    else if(l1 >= l2 && l1 <= r2) res = l1;
+    else res = l1 + l2;
+    cout << res;
+}
