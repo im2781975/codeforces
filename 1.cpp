@@ -59,3 +59,18 @@ int main(){
         cout << medium(a, b, c));
     }
 }
+using namespace std;
+//problem/1857/A_determine whether it is possible to color all its elements in two colors in such a way that the sums 
+//of the elements of both colors have the same parity and each color has at least one element colored.
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        int arr[n], sum = 0;
+        for(int i = 0; i < n; i++)
+            cin >> arr[i];
+        for(int i = 0; i < n; i++)
+            sum += arr[i];
+        (sum % 2 == 0) ? cout << "Yes\n" : cout << "No\n"
+    }
+}
