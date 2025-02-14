@@ -130,6 +130,33 @@ int main(){
     }
 }
 using namespace std;
+// Koxia and Whiteboards
+//contest/1770/problem/A _Kiyora has n whiteboards, each containban integer a[i]. she performs m operations, where each
+// they choose any whiteboard and replace its number with b[j] from a given list. determine the maximum possible sum of the numbers 
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n, m; cin >> n >> m;
+        long long sum = 0;
+        list <int> lst;
+        for(int i = 0; i < n; i++){
+            int x; cin >> x;
+            lst.push_back(x);
+            sum += x;
+        }
+        lst.sort();
+        for(int i = 0; i < m; i++){
+            int x; cin >> x;
+            sum -= lst.front();
+            sum += x;
+            lst.pop_front();
+            lst.push_front(x);
+            lst.sort();
+        }
+        cout << sum << "\n";
+    }
+}
+using namespace std;
 // Array Coloring
 //problemset/problem/1857/A _determine whether it is possible to color all its elements in two colors in such a way that the sums 
 //of the elements of both colors have the same parity and each color has at least one element colored.
