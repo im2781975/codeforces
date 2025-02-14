@@ -226,6 +226,22 @@ int main(){
     }
 }
 using namespace std;
+// Polycarp and the Day of Pi
+//contest/1790/problem/A _print how many digits of PI will be matched
+int main(){
+    int t; cin >> t;
+    while(t--){
+        string PI = "314159265358979323846264338327";
+        string str; cin >> str;
+        int res = 0;
+        for(int i = 0; i < str.size(); i++){
+            if(PI[i] == str[i]) res++;
+            else break;
+        }
+        cout << res;
+    }
+}
+using namespace std;
 // Array Coloring
 //problemset/problem/1857/A _determine whether it is possible to color all its elements in two colors in such a way that the sums 
 //of the elements of both colors have the same parity and each color has at least one element colored.
