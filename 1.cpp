@@ -1,6 +1,7 @@
 using namespace std;
-//problem/369/A _given n dishes, where each dish requires either a bowl or a plate 
-//have a limited number of bowls and plates.determine how many dishes cannot be served due to a lack of resources.
+// Valera and Plates
+// problemset/problem/369/A _given n dishes, where each dish requires either a bowl or a plate 
+// have a limited number of bowls and plates.determine how many dishes cannot be served due to a lack of resources.
 int main(){
     int n, bowl, plate; cin >> n >> bowl >> plate;
     int arr[n + 5], b = 0, p = 0;
@@ -32,8 +33,9 @@ int main(){
     cout << ans + res;
 }
 using namespace std;
+// Permutation Minimization by Deque
 // contest/1579/problem/E1 _Given a permutation of size n,need to construct a deque by sequentially adding elements. starting smallest value.
-//Before adding each value choose whether to add it to the front or the back of the deque.determine the final order of elements in the deque
+// Before adding each value choose whether to add it to the front or the back of the deque.determine the final order of elements in the deque
 int main(){
     int t; cin >> t;
     while(t--){
@@ -64,6 +66,7 @@ int main(){
     }
 }
 using namespace std;
+// Eating Queries
 //contest/1676/problem/E _Timur has n candies, each with a sugar content a[i]. He will ask q queries, where for each query x[j], 
 //determine the minimum number of candies he needs to eat to consume at least x[j] sugar. If it's not possible, return -1
 int main(){
@@ -88,6 +91,7 @@ int main(){
     }
 }
 using namespace std;
+// Minimums and Maximums
 //contest/1680/problem/A _calculate the minimum possible number of elements in a array by which range [l1, r1] elements 
 // equal to its minimum and [l2, r2] elements in the array equal to its maximum.
 int main(){
