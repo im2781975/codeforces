@@ -181,6 +181,51 @@ int main(){
     }
 }
 using namespace std;
+// Matrix of Differences
+// contest/1783/problem/B _Given an n × n matrix filled with integers from 1 to n*n.define its "beauty"
+// as the number of unique absolute differences between adjacent elements (horizontally or vertically).
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        list <int> lst;
+        for(int i = 1; i <= n * n; i++)
+            lst.push_back(i);
+        int grid[n][n];
+        for(int i = 0; i < n; i++){
+            if((i + 1) % 2 != 0){
+                for(int j = 0; j < n; j++){
+                    if((j + 1) % 2 != 0){
+                        grid[i][j] = lst.back();
+                        lst.pop_back();
+                    }
+                    else{
+                        grid[i][j] = lst.front();
+                        lst.pop_front();
+                    }
+                }
+            }
+            else{
+                for(int j = n - 1; j >= 0; j--){
+                    if((j + 1) % 2 != 0){
+                        grid[i][j] = lst.front();
+                        lst.pop_front();
+                    }
+                    else{
+                        grid[i][j] = lst.back();
+                        lst.pop_back();
+                    }
+                }
+            }
+        }
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++)
+                cout << grid[i][j] << " ";
+            cout << "\n";
+        }
+    }
+}
+using namespace std;
 // Array Coloring
 //problemset/problem/1857/A _determine whether it is possible to color all its elements in two colors in such a way that the sums 
 //of the elements of both colors have the same parity and each color has at least one element colored.
