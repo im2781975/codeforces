@@ -112,7 +112,8 @@ int main(){
     }
 }
 using namespace std;
-//problem/1760/A _find the medium number among three integers
+// Medium Number
+//problemset/problem/1760/A _find the medium number among three integers
 int medium(int a, int b, int c){
     int maxi = a, mini = a;
     if(b > maxi) maxi = b;
@@ -129,7 +130,7 @@ int main(){
     }
 }
 using namespace std;
-//problem/1857/A _determine whether it is possible to color all its elements in two colors in such a way that the sums 
+//problemset/problem/1857/A _determine whether it is possible to color all its elements in two colors in such a way that the sums 
 //of the elements of both colors have the same parity and each color has at least one element colored.
 int main(){
     int t; cin >> t;
