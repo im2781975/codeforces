@@ -130,6 +130,7 @@ int main(){
     }
 }
 using namespace std;
+// Array Coloring
 //problemset/problem/1857/A _determine whether it is possible to color all its elements in two colors in such a way that the sums 
 //of the elements of both colors have the same parity and each color has at least one element colored.
 int main(){
