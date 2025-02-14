@@ -103,7 +103,8 @@ int main(){
     cout << res;
 }
 using namespace std;
-//problem/1742/A _given three integers a Determine if one of them is the sum of the other two.
+// Sum
+//problemset/problem/1742/A _given three integers a Determine if one of them is the sum of the other two.
 int main(){
     int t; cin >> t;
     while(t--){
