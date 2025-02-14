@@ -157,6 +157,30 @@ int main(){
     }
 }
 using namespace std;
+// Hayato and School
+//contest/1780/problem/A _find three indices in an array such that the sum of the elements at these indices is odd
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        vector <int> odd, even;
+        for(int i = 1; i <= n; i++){
+            int x; cin >> x;
+            if(x % 2 == 0)
+                even.push_back(i);
+            else
+                odd.push_back(i);
+        }
+        if(odd.size() >= 3){
+            cout << "YES\n" << odd[0] << " " << odd[1] << " " << odd[2];
+        }
+        else if(odd.size() >= 1 && even.size() >= 2)
+            cout << "Yes\n" << odd[0] << " " << even[0] << " " << even[1];
+        else
+            cout << "No";
+    }
+}
+using namespace std;
 // Array Coloring
 //problemset/problem/1857/A _determine whether it is possible to color all its elements in two colors in such a way that the sums 
 //of the elements of both colors have the same parity and each color has at least one element colored.
