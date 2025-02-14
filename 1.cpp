@@ -64,6 +64,30 @@ int main(){
     }
 }
 using namespace std;
+//contest/1676/problem/E _Timur has n candies, each with a sugar content a[i]. He will ask q queries, where for each query x[j], 
+//determine the minimum number of candies he needs to eat to consume at least x[j] sugar. If it's not possible, return -1
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n, q; cin >> n >> q;
+        vector <int> vec(n);
+        for(int i = 0; i < n; i++)
+            cin >> vec[i];
+        sort(vec.begin(), vec.end(), greater <int> ());
+        vector <int> pref(n + 1, 0);
+        for(int i = 1; i <= n; i++)
+            pref[i] = pref[i - 1] + vec[i - 1];
+        while(q--){
+            int val; cin >> val;
+            auto it = lower_bound(pref.begin(), pref.end(), val);
+            if(it != pref.end())
+                cout << it - pref.begin() << "\n";
+            else
+                cout << -1 << "\n";
+        }
+    }
+}
+using namespace std;
 //contest/1680/problem/A _calculate the minimum possible number of elements in a array by which range [l1, r1] elements 
 // equal to its minimum and [l2, r2] elements in the array equal to its maximum.
 int main(){
@@ -75,7 +99,7 @@ int main(){
     cout << res;
 }
 using namespace std;
-//problem/1742/A_given three integers a Determine if one of them is the sum of the other two.
+//problem/1742/A _given three integers a Determine if one of them is the sum of the other two.
 int main(){
     int t; cin >> t;
     while(t--){
