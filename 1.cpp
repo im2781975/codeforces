@@ -242,6 +242,31 @@ int main(){
     }
 }
 using namespace std;
+// Teleporters (Easy Version)
+// contest/1791/problem/G1 _Given (0 to n) points on a number line ,) each point i teleporter that costs a[i] coins to use. 
+//Using a teleporter sends you back to point 0, but each teleporter can be used only once.move left or right on the number line at a cost of 1 coin per unit. 
+//Starting at 0 with c coins, determine the maximum number of teleporters you can use.
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n, cost; cin >> n >> cost;
+        vector <int> vec(n);
+        for(int i = 0; i < n; i++){
+            int x; cin >> x;
+            vec[i] = i + 1 + x;
+        }
+        sort(vec.begin(), vec.end());
+        int res = 0;
+        for(int i = 0; i < vec.size(); i++){
+            if(cost < vec[i])
+                break;
+            cost -= vec[i];
+            res++;
+        }
+        cout << res << "\n";
+    }
+}
+using namespace std;
 // Array Coloring
 //problemset/problem/1857/A _determine whether it is possible to color all its elements in two colors in such a way that the sums 
 //of the elements of both colors have the same parity and each color has at least one element colored.
