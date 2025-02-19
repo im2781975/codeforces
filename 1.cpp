@@ -59,6 +59,23 @@ int main(){
             remain[str[i] - 'a']--;
         }
     }
+    //-----//
+    int n, k; cin >> n >> k;
+    string str; cin >> str;
+    map <char, vector <int> > idx;
+    for(int i = 0; i < n; i++)
+        idx[str[i]].push_back(i);
+    map <int, bool> visited;
+    for(char ch = 'a'; ch <= 'z'; ch++){
+        for(int i = 0; i < idx[ch].size() && k >= 1; i++){
+            int ix = idx[ch][i];
+            visited[ix] = true; k--;
+        }
+    }
+    for(int i = 0; i < n; i++){
+        if(!visited[i])
+            cout << str[i];
+    }
 }
 using namespace std;
 // Permutation Minimization by Deque
