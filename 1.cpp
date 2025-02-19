@@ -1,4 +1,19 @@
 using namespace std;
+// A. Bit++
+// contest/282/problem/A _have a programming language called Bit++ with one variable x, which starts at 0. consists of statements that either:
+//Increase x by 1: "++X" or "X++".Decrease x by 1: "--X" or "X--".Execute all statements and print the final value of x.
+int main(){
+    int t, cnt = 0; cin >> t;
+    while(t--){
+        string str; cin >> str;
+        if(str == "++X" || str == "X++")
+            cnt++;
+        else if(str == "--X" || str == "X--")
+            cnt--;
+    }
+    cout << cnt;
+}
+using namespace std;
 // Valera and Plates
 // problemset/problem/369/A _given n dishes, where each dish requires either a bowl or a plate 
 // have a limited number of bowls and plates.determine how many dishes cannot be served due to a lack of resources.
