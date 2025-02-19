@@ -48,6 +48,27 @@ int main(){
     cout << ans + res;
 }
 using namespace std;
+// A. Brain's Photos
+// problemset/problem/707/A _ Brain has a photo represented as an n × m matrix, where each cell contains a letter representing a pixel's color.
+// Colors in the photo: Black-and-white colors: 'W' (white), 'G' (grey), 'B' (black)
+//Colored colors: 'C' (cyan), 'M' (magenta), 'Y' (yellow) Check if the photo is black-and-white or colored
+int main(){
+    int n, m; cin >> n >> m;
+    char arr[n][m];
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= 2 * m; j++)
+            cin >> arr[i][j];
+    }
+    int flag = 0;
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= 2 * m; j++){
+            if(arr[i][j] == 'C' || arr[i][j] == 'Y' || arr[i][j] == 'M')
+                flag = 1;
+        }
+    }
+    (flag == 0) ? printf("#Black&White\n") : printf("#Color\n");
+}
+using namespace std;
 // C. Alphabetic Removals
 // contest/999/problem/C _From a string remove k characters.try to remove the leftmost 'a' first.
 // if 'a' is not left, remove the leftmost 'b'.Continue in alphabetical order ('c', 'd', ..., 'z'),
