@@ -209,6 +209,23 @@ int main(){
     cout << res;
 }
 using namespace std;
+// B. Bright, Nice, Brilliant
+// problemset/problem/1734/B  _There has a pyramid with n floors, numbered(1 to n).i-th floor has exactly i rooms.Each room (i, j) has two staircases leading to the two rooms directly below: (i+1, j) and (i+1, j+1).Each room can either have a torch or be empty.
+//brightness of a room is the number of torches from which you can reach it using staircases. nice pyramid is one where all rooms in each floor have the same brightness.
+//brilliance of a pyramid is the sum of brightness values of the leftmost rooms (1,1), (2,1), ..., (n,1).Fine  a torch arrangement that makes the pyramid nice and maximizes its brilliance.
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= i; j++){
+                (j > 1 && j < i) ? printf("0") : printf("1");
+            }
+            printf("\n");
+        }
+    }
+}
+using namespace std;
 // Sum
 //problemset/problem/1742/A _given three integers a Determine if one of them is the sum of the other two.
 int main(){
