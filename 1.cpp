@@ -78,6 +78,31 @@ int main(){
     }
 }
 using namespace std;
+// C. Bad Sequence
+// contest/1214/problem/C _check if can make a bracket sequence  correct by moving at most 
+//one bracket to a different position (without flipping it).correct bracket sequence must:Have equal numbers of ( and ),
+//Be balanced.Determine if moving one bracket to a different position can fix the sequence
+int main(){
+    int n; cin >> n;
+    string str; cin >> str;
+    stack <char> st;
+    for(int i = 0; i < n; i++){
+        if(i == 0) st.push(str[i]);
+        else{
+            if(st.size() >= 1 && st.top() == '(' && str[i] == ')')
+                st.pop();
+            else st.push(str[i]);
+        }
+    }
+    int open = 0, close = 0;
+    while(!st.empty()){
+        if(st.top() == '(') open++;
+        else close++;
+        st.pop();
+    }
+    ((open == 0 && close == 0) || (open == 1 && close == 1)) ? cout << "Yes" : cout << "No";
+}
+using namespace std;
 // Permutation Minimization by Deque
 // contest/1579/problem/E1 _Given a permutation of size n,need to construct a deque by sequentially adding elements. starting smallest value.
 // Before adding each value choose whether to add it to the front or the back of the deque.determine the final order of elements in the deque
