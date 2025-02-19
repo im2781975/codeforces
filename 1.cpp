@@ -1,4 +1,19 @@
 using namespace std;
+// contest/4/problem/C
+// C. Registration system
+int main(){
+    int t; cin >> t;
+    map <string, int> mp;
+    while(t--){
+        string str; cin >> str;
+        if(mp[str] >= 1)
+            cout << str << mp[str];
+        else
+            cout << "OK";
+        mp[str]++;
+    }
+}
+using namespace std;
 // A. Bit++
 // contest/282/problem/A _have a programming language called Bit++ with one variable x, which starts at 0. consists of statements that either:
 //Increase x by 1: "++X" or "X++".Decrease x by 1: "--X" or "X--".Execute all statements and print the final value of x.
