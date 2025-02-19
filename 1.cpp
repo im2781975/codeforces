@@ -274,6 +274,28 @@ int main(){
         }
     }
 }
+// contest/1741/problem/A
+// A. Compare T-Shirt Sizes
+using namespace std;
+int main(){
+    int t; cin >> t;
+    while(t--){
+        string str, ing; cin >> str >> ing;
+        int len = str.length(), gth = ing.length();
+        char ch = str[len - 1], ar = ing[gth - 1];
+        if (ch == ar) {
+            if (ch == 'S') {
+                cout << (len > gth ? "<\n" : (len < gth ? ">\n" : "=\n"));
+            }else {
+                cout << (len > gth ? ">\n" : (len < gth ? "<\n" : "=\n"));
+            }
+        } else {
+            if ((ch == 'L' && (ar == 'M' || ar == 'S')) || (ch == 'M' && ar == 'S'))
+                cout << ">\n";
+            else cout << "<\n";
+        }
+    }
+}
 using namespace std;
 // Sum
 //problemset/problem/1742/A _given three integers a Determine if one of them is the sum of the other two.
