@@ -181,6 +181,15 @@ int main(){
         int n; cin >> n;
         cout << res[n];
     }
+    /*
+    int n, k; cin >> n;
+    for(int i = 1; i <= n; i++){
+        while(i % 3 == 0 || i % 10 == 3){
+            i++; n++;
+        }
+        k = i;
+    }
+    cout << k; */
 }
 using namespace std;
 // Permutation Minimization by Deque
