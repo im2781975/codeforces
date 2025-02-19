@@ -224,6 +224,26 @@ int main(){
     cout << res;
 }
 using namespace std;
+// A. Difference Operations
+// problemset/problem/1708/A
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        int arr[n];
+        for(int i = 0; i < n; i++)
+            cin >> arr[i];
+        int IsDiv = 1;
+        for(int i = 1; i < n; i++){
+            if(arr[i] % arr[0] != 0){
+                IsDiv = 0;
+                break;
+            }
+        }
+        printf(IsDiv ? "Yes" : "No");
+    }
+}
+using namespace std;
 // B. Bright, Nice, Brilliant
 // problemset/problem/1734/B  _There has a pyramid with n floors, numbered(1 to n).i-th floor has exactly i rooms.Each room (i, j) has two staircases leading to the two rooms directly below: (i+1, j) and (i+1, j+1).Each room can either have a torch or be empty.
 //brightness of a room is the number of torches from which you can reach it using staircases. nice pyramid is one where all rooms in each floor have the same brightness.
