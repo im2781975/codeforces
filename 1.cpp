@@ -33,6 +33,34 @@ int main(){
     cout << ans + res;
 }
 using namespace std;
+// C. Alphabetic Removals
+// contest/999/problem/C _From a string remove k characters.try to remove the leftmost 'a' first.
+// if 'a' is not left, remove the leftmost 'b'.Continue in alphabetical order ('c', 'd', ..., 'z'),
+//Repeat this process exactly k times.After removing k characters, print the remaining string.
+int main(){
+    int n, k; cin >> n >> k;
+    string str; cin >> str;
+    vector <int> freq(26, 0);
+    for(int i = 0; i < str.size(); i++)
+        freq[str[i] - 'a']++;
+    char eliminate = 'a';
+    while(k > 0 && eliminate <= 'z'){
+        int cnt = min(k, freq[eliminate - 'a']);
+        k -= cnt;
+        freq[eliminate - 'a'] -= cnt;
+        eliminate++;
+    }
+    int remain[26] = {0};
+    for(char ch = 'a'; ch <= 'z'; ch++)
+        remain[ch - 'a'] = freq[ch - 'a'];
+    for(int i = 0; i < str.size(); i++){
+        if(remain[str[i] - 'a'] > 0){
+            cout << str[i];
+            remain[str[i] - 'a']--;
+        }
+    }
+}
+using namespace std;
 // Permutation Minimization by Deque
 // contest/1579/problem/E1 _Given a permutation of size n,need to construct a deque by sequentially adding elements. starting smallest value.
 // Before adding each value choose whether to add it to the front or the back of the deque.determine the final order of elements in the deque
