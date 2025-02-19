@@ -154,6 +154,20 @@ int main(){
     ((open == 0 && close == 0) || (open == 1 && close == 1)) ? cout << "Yes" : cout << "No";
 }
 using namespace std;
+// problemset/problem/1553/A
+// A. Digits Sum
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n, res; cin >> n;
+        if(n % 10 < 9)
+            res = n / 10;
+        else
+            res = (n / 10) + 1;
+        cout << res;
+    }
+}
+using namespace std;
 // Permutation Minimization by Deque
 // contest/1579/problem/E1 _Given a permutation of size n,need to construct a deque by sequentially adding elements. starting smallest value.
 // Before adding each value choose whether to add it to the front or the back of the deque.determine the final order of elements in the deque
