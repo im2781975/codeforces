@@ -14,6 +14,13 @@ int main(){
     }
 }
 using namespace std;
+// A. Domino piling
+// problemset/problem/50/A
+int main(){
+    int m, n; cin >> m >> n;
+    cout << (m * n) / 2;
+}
+using namespace std;
 // A. Bit++
 // contest/282/problem/A _have a programming language called Bit++ with one variable x, which starts at 0. consists of statements that either:
 //Increase x by 1: "++X" or "X++".Decrease x by 1: "--X" or "X--".Execute all statements and print the final value of x.
