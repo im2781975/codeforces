@@ -160,6 +160,42 @@ int main(){
     }
     ((open == 0 && close == 0) || (open == 1 && close == 1)) ? cout << "Yes" : cout << "No";
 }
+#using namespace std;
+// C. Dominant Piranha
+// problemset/problem/1433/C
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        int arr[n], res = -1, mx = 0;
+        for(int i = 0; i < n; i++)
+            cin >> arr[i];
+        int dup = 1;
+        for(int i = 1; i < n; i++){
+            if(arr[i] != arr[0]){
+                dup = 0;
+                break;
+                
+            }
+        }
+        if(dup){
+            cout << -1;
+            continue;
+        }
+        for(int i = 0; i < n; i++){
+            if(arr[i] > mx) mx = arr[i];
+        }
+        for(int i = 0; i < n; i++){
+            if(arr[i] == mx){
+                if ((i > 0 && arr[i] > arr[i - 1]) || (i < n - 1 && arr[i] > arr[i + 1])) {
+                    res = i + 1;
+                    break;
+                }
+            }
+        }
+        cout << res << "\n";
+    }
+}
 using namespace std;
 // problemset/problem/1553/A
 // A. Digits Sum
