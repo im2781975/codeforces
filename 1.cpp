@@ -197,6 +197,24 @@ int main(){
     }
 }
 using namespace std;
+// D. Epic Transformation
+// problemset/problem/1506/D
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        map <int, int> freq;
+        int maxfreq = 0;
+        for(int i = 0; i < n; i++){
+            int x; cin >> x;
+            freq[x]++;
+            maxfreq = max(maxfreq, freq[x]);
+        }
+        int rem = n - maxfreq;
+        cout << (maxfreq > rem) ? (maxfreq - rem) : n % 2 << "\n";
+    }
+}
+using namespace std;
 // problemset/problem/1553/A
 // A. Digits Sum
 int main(){
