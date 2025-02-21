@@ -523,6 +523,19 @@ int main(){
     }
 }
 using namespace std;
+// problemset/problem/1787/A
+// A. Exponential Equation
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        if(n % 2 == 0)
+            cout << n / 2 << " " << 1 << "\n";
+        else
+            cout << -1 << "\n";
+    }
+}
+using namespace std;
 // Polycarp and the Day of Pi
 //contest/1790/problem/A _print how many digits of PI will be matched
 int main(){
