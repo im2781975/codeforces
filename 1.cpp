@@ -286,6 +286,24 @@ int main(){
     }
 }
 using namespace std;
+// B. Equal Candies
+// problemset/problem/1676/B
+int main(){
+    int t; cin >> t;
+    while(t--){
+        int n; cin >> n;
+        int arr[n], sum = 0, mini = INT_MAX;
+        for(int i = 0; i < n; i++){
+            cin >> arr[i];
+            if(arr[i] < mini)
+                mini = arr[i];
+        }
+        for(int i = 0; i < n; i++)
+            sum += arr[i] - mini;
+        cout << sum << "\n";
+    }
+}
+using namespace std;
 // Eating Queries
 //contest/1676/problem/E _Timur has n candies, each with a sugar content a[i]. He will ask q queries, where for each query x[j], 
 //determine the minimum number of candies he needs to eat to consume at least x[j] sugar. If it's not possible, return -1
